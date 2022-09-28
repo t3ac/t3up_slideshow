@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2014-09-22T11:44:12Z" product-name="t3up_slideshow">
+		<header/>
+		<body>
+ 		    <trans-unit id="scssSlideshow">
+			     <source>Including the scss for t3upslideshow</source>
+			     <target state="translated">T3UP - Slideshow Scss einbinden (empfohlen)</target>
+		    </trans-unit> 	      	
+		</body>
+	</file>
+</xliff>

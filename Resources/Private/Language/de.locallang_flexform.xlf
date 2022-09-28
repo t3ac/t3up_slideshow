@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2014-09-22T11:44:12Z" product-name="t3up_slideshow">
+		<header/>
+		<body>
+			
+			
+			<trans-unit id="sheet.options">
+			     <source>Options</source>
+			     <target state="translated">Optionen</target>
+		    </trans-unit>
+			<trans-unit id="sheet.controls">
+			     <source>Controls</source>
+			     <target state="translated">Einstellungen</target>
+		    </trans-unit>	
+
+
+			/* -- Controls --------------------------------- */
+		    
+			<trans-unit id="slideshow.autostart">
+			     <source>Autostart</source>
+			     <target state="translated">Autostart</target>
+		    </trans-unit>
+			<trans-unit id="slideshow.animation">
+			     <source>Type of presentation</source>
+			     <target state="translated">Art der Präsentation</target>
+		    </trans-unit>
+			<trans-unit id="slideshow.animation.1">
+			     <source>slide</source>
+			     <target state="translated">Verschiebe</target>
+		    </trans-unit>
+			<trans-unit id="slideshow.animation.2">
+			     <source>fade</source>
+			     <target state="translated">Einblenden</target>
+		    </trans-unit>
+			<trans-unit id="slideshow.slideshowwidth">
+			     <source>Width of the slideshow</source>
+			     <target state="translated">Breite des Carousels in Pixel, aber 0 = 100%</target>
+		    </trans-unit>	
+			<trans-unit id="slideshow.slideshowheight">
+			     <source>Height of the slideshow</source>
+			     <target state="translated">Höhe des Carousels (1-100vH) Vordefiniert: 60vH, Mindestwert 200px;</target>	
+		    </trans-unit>
+			<trans-unit id="slideshow.controlNav">
+			     <source>Show controls</source>
+			     <target state="translated">Zeige Kontrollpunkte</target>
+		    </trans-unit>
+			<trans-unit id="slideshow.directionNav">
+			     <source>Create navigation for previous/next navigation</source>
+			     <target state="translated">Zeige Richtungspfeile</target>
+		    </trans-unit>
+			<trans-unit id="slideshow.slideshowSpeed">
+			     <source>Speed in mil. Sec.</source>
+			     <target state="translated">Geschwindigkeit in Millisekunden (Vorgabe 4 Sekunden)</target>
+		    </trans-unit>
+			<trans-unit id="slideshow.animationLoop">
+			     <source>Animation Loop</source>
+			     <target state="translated">Animation wiederholen</target>
+		    </trans-unit>	 
+		    
+		    
+			/* -- Optionen --------------------------------- */
+			
+            <trans-unit id="slideshow.captionshow">
+                 <source>Schow/hide the imagecaption and -description</source>
+                 <target state="translated">Zeige Bildtitel und -beschreibung</target>  
+            </trans-unit>
+		    	
+			<trans-unit id="slideshow.captionbg">
+			     <source>Background-color</source>
+			     <target state="translated">Hintergrundfarbe des Textbereichs</target>	
+		    </trans-unit>		
+		    
+			<trans-unit id="slideshow.captionColor">
+			     <source>Text-color</source>
+			     <target state="translated">Textfarbe</target>	
+		    </trans-unit>	
+		    
+			<trans-unit id="slideshow.captionOpacity">
+			     <source>Background-opacity</source>
+			     <target state="translated">Hintergrund Durchsichtigkeit</target>	
+		   </trans-unit>
+		    
+			<trans-unit id="slideshow.textalign">
+			     <source>textalign</source>
+			     <target state="translated">Textausrichtigung</target>	
+		    </trans-unit>	
+			
+			<trans-unit id="slideshow.imageslideshowbg">
+			     <source>Background-color</source>
+			     <target state="translated">Hintergrundfarbe</target>	
+		    </trans-unit>	
+			<trans-unit id="slideshow.slideshowbg">
+			     <source>Background-color</source>
+			     <target state="translated">Hintergrundfarbe des kompletten Carousels</target>
+		    </trans-unit>	
+		    
+			<trans-unit id="slideshow.slideshowoverlaycolor">
+			     <source>Overlay-color</source>
+			     <target state="translated">Transparenzfarbe für die Bilder</target>
+		    </trans-unit>	
+			
+			<trans-unit id="label.yes">
+				<source>yes</source>
+				<target state="translated">Ja</target>   
+		   </trans-unit>   
+			<trans-unit id="label.no">		
+			     <source>no</source>
+				<target state="translated">Nein</target>  			     
+		   </trans-unit>   
+	 					
+		</body>
+	</file>
+</xliff>

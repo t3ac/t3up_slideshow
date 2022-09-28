@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems {
+    common.elements {
+        slideshow {
+            iconIdentifier = t3up_slideshow
+            title = LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_backend.xlf:slideshow.title
+            description = LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_backend.xlf:slideshowe.description
+            tt_content_defValues {
+                CType = slideshow
+            }
+        }  
+    }
+    common.show := addToList(slideshow)
+}

@@ -1,0 +1,160 @@
+ <html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+
+
+    <div id="c{data.uid}" class="t3upSlideshow frame-{data.frame_class} {f:if(condition: data.space_before_class, then: 'frame-space-before-{data.space_before_class}')} {f:if(condition: data.space_after_class, then: 'frame-space-after-{data.space_after_class}')}"    
+	    {f:if(condition: '{settings.slideshowbackgroundcolor}', then: 'style="background-color:{settings.slideshowbackgroundcolor};"')}>
+    
+    
+		<div id="slideshow{data.uid}" 
+			class="t3up_slider carousel slide {settings.animation} Stil{settings.style}" data-ride="carousel" data-bs-ride="carousel"
+			max-width:{f:if(condition:'{settings.slideshowwidth}',then:'{settings.slideshowwidth}px;',else:'100%;')}"
+			data-interval="{settings.slideshowSpeed}">
+			
+		    <!-- Indicators -->
+		    <f:if condition="{settings.controlNav}">
+			    <ol class="carousel-indicators">
+			    	<f:for each="{image}" as="helper" iteration="iteration">
+			    		<li type="button" data-target="#slideshow{data.uid}"  data-bs-target="#slideshow{data.uid}"   data-slide-to="{iteration.index}" data-bs-slide-to="{iteration.index}"  class="{f:if(condition: '{iteration.isFirst}', then: 'active')}"   ></li>	    	
+					</f:for>
+			    </ol> 	
+		    </f:if>
+		    
+			<div class="carousel-inner">
+				<f:for each="{image}" as="image" iteration="iteration">
+		    		<div data-bs-interval="{settings.slideshowSpeed}" class="carousel-item {f:if(condition: '{iteration.isFirst}', then: ' active')}" >
+		    		
+		    		
+	    				<f:if condition="{image.link}">
+		    				<f:then>
+			    				<f:link.typolink parameter="{image.link}">
+
+                                    <f:if condition="{settings.slideshowoverlaycolor}">
+                                        <div class="overlayslider w-100 h-100" style="background-color: {settings.slideshowoverlaycolor};"></div>
+                                    </f:if>
+                                     
+				          		    <f:render section="picture" arguments="{_all}"/>
+				          		    
+                                    <f:if condition="{settings.captionshow}">
+                                        <f:if condition="{image.title}">
+                                            <f:then>
+                                                <div class="carousel-caption" style="background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity};  {settings.captioncolor}; text-align: {settings.textalign}">
+                                                    <div class="container">
+                                                        <h3 class="m-0">{image.title}</h3> 
+                                                        {f:if(condition: '{image.description}', then: '<p class="d-none d-md-block mt-3">{image.description}</p>')}      
+                                                    </div>
+                                               </div>
+                                             </f:then>
+                                         </f:if>
+                                     </f:if>
+                                     
+				          		</f:link.typolink> 
+							</f:then>
+							
+							
+		    				<f:else>
+
+				             	<f:if condition="{data.image_zoom}">
+				             		<f:then>
+					             		<span class="lightboxstyle-{data.lightboxstyle}">
+							                 <a href="{f:uri.image(image: image)}" class="lightbox" data-imagelightbox="{data.lightboxstyle}">
+												<f:render section="picture" arguments="{_all}"/>
+											</a>
+										</span>	
+									</f:then>
+									<f:else>
+									
+									<f:if condition="{settings.slideshowoverlaycolor}">
+                                        <div class="overlayslider w-100 h-100" style="background-color: {settings.slideshowoverlaycolor};"></div>
+                                    </f:if>
+
+                                    <f:render section="picture" arguments="{_all}"/>
+                                    
+									</f:else>
+								</f:if>	
+								
+                                    <f:if condition="{settings.captionshow}">
+                                        <f:if condition="{image.title}">
+                                            <f:then>
+                                                <div class="carousel-caption" style="background-color: {settings.captionbackgroundcolor}{settings.captionopacity}{settings.captionopacity};  {settings.captioncolor}; text-align: {settings.textalign}">
+                                                    <div class="container">
+                                                        <h3 class="m-0">{image.title}</h3> 
+                                                        {f:if(condition: '{image.description}', then: '<p class="d-none d-md-block mt-3">{image.description}</p>')}      
+                                                    </div>
+                                               </div>
+                                             </f:then>
+                                         </f:if>
+                                     </f:if>	
+						          	
+								</f:else>				          		
+	                       </f:if>     
+				  	</div>
+				</f:for>
+			</div>
+
+             <!-- Left and right controls -->
+             <f:if condition="{settings.directionNav}">
+                <div class="direction"> 
+                    <a class="carousel-control-prev" href="#slideshow{data.uid}" data-bs-target="#slideshow{data.uid}" type="button" data-slide="prev"  data-bs-slide="prev">
+                      <span class="symbol prev chevron-left">&#xF104</span>
+                      <span class="sr-only visually-hidden">Previous</span>
+                     </a>
+                    <a class="carousel-control-next" href="#slideshow{data.uid}" data-bs-target="#slideshow{data.uid}" type="button" data-slide="next"  data-bs-slide="next">
+                      <span class="symbol next chevron-right">&#xF105</span>
+                      <span class="sr-only visually-hidden">Next</span>
+                    </a>
+                </div>  
+            </f:if> 
+
+
+		</div>
+	</div>
+	
+	
+       	      
+    <f:section name="picture">
+
+        <picture class="w-100">
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '4000')}"  media="(min-width: 2561px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '4000')}"  media="(min-width: 2561px)" type="image/jpeg">
+             
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '2560')}"  media="(min-width: 1841px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '2560')}"  media="(min-width: 1841px)" type="image/jpeg">
+             
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1840')}"  media="(min-width: 1441px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1840')}"  media="(min-width: 1441px)" type="image/jpeg">            
+                             
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1440')}"  media="(min-width: 1281px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1440')}"  media="(min-width: 1281px)" type="image/jpeg">            
+             
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1280')}"  media="(min-width: 993px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1280')}"  media="(min-width: 993px)" type="image/jpeg">        
+                     
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '992')}"   media="(min-width: 769px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '992')}"   media="(min-width: 769px)" type="image/jpeg"> 
+             
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '768')}"   media="(min-width: 641px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '768')}"   media="(min-width: 641px)" type="image/jpeg">
+             
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '640')}"   media="(min-width: 361px)" type="image/wepb">
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '640')}"   media="(min-width: 361px)" type="image/jpeg">
+                    
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '360')}"  type="image/wepb">        
+             <source srcset="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '360')}"  type="image/jpeg">    
+            	
+            <img class="w-100" src="{f:uri.image(src:'{image.uid}', treatIdAsReference:'1', cropVariant: 'default')}"
+				height="{f:if(condition: '{dimensions.height}', then: '{dimensions.height}', else: '{image.properties.height}' )}"
+				width="{f:if(condition: '{dimensions.width}', then: '{dimensions.width}', else: '{image.properties.width}' )}"				
+	            {f:if(condition: '{image.title}', then: 'title="{image.title}"')}
+	            {f:if(condition: '{image.alternative}', then: 'alt="{image.alternative}"')} 
+	            {f:if(condition: '{image.properties.creator}', then: 'author="{image.properties.creator}"')}                 
+	        />
+        </picture>
+    </f:section>  
+    
+    <f:section name="debug">
+        {_all -> f:debug(inline:1)}
+    </f:section>
+
+</html>
