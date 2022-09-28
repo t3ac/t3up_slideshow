@@ -14,7 +14,7 @@ tt_content {
                 references.fieldName = image
                 as = image
             }
-            20 = T3up\T3upSlideshow\DataProcessing\FlexFormProcessor
+            20 = T3ac\T3upSlideshow\DataProcessing\FlexFormProcessor
             20 {
                 if.isTrue.field = pi_flexform
                 fieldName = pi_flexform
