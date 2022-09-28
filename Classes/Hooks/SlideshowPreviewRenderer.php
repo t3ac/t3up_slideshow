@@ -1,5 +1,5 @@
 <?php
-namespace T3up\T3upSlideshow\Hooks;
+namespace T3ac\T3upSlideshow\Hooks;
 
 /*
  * This file is part of the TYPO3 CMS extension T3UP.
