@@ -44,7 +44,9 @@
 			<trans-unit id="slideshow.animationLoop">
 			     <source>Animation Loop</source>
 		    </trans-unit>	 
-
+			<trans-unit id="slideshow.maxheight">
+			     <source>Max. height of the slider</source>
+		    </trans-unit>	 
 		    
 			/* -- Optionen --------------------------------- */
 			
@@ -72,14 +74,14 @@
 			<trans-unit id="slideshow.slideshowoverlaycolor">
 			     <source>Overlay-color</source>
 		    </trans-unit>	
-	    
 			<trans-unit id="label.yes">
 			     <source>yes</source>
-		   </trans-unit>   
+		    </trans-unit>	
 			<trans-unit id="label.no">
 			     <source>no</source>
-		   </trans-unit>   		   
-		   
+		    </trans-unit>	
+
+	    
 		</body>
 	</file>
 </xliff>

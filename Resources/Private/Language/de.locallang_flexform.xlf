@@ -57,6 +57,10 @@
 			     <source>Animation Loop</source>
 			     <target state="translated">Animation wiederholen</target>
 		    </trans-unit>	 
+			<trans-unit id="slideshow.maxheight">
+			     <source>Max. height of the slider</source>
+			     <target state="translated">Maximale Höhe des Sliders (px)</target>
+		    </trans-unit>	 
 		    
 		    
 			/* -- Optionen --------------------------------- */
@@ -99,16 +103,15 @@
 			     <source>Overlay-color</source>
 			     <target state="translated">Transparenzfarbe für die Bilder</target>
 		    </trans-unit>	
-			
 			<trans-unit id="label.yes">
-				<source>yes</source>
-				<target state="translated">Ja</target>   
-		   </trans-unit>   
-			<trans-unit id="label.no">		
+			     <source>yes</source>
+			     <target state="translated">Ja</target>
+		    </trans-unit>	
+			<trans-unit id="label.no">
 			     <source>no</source>
-				<target state="translated">Nein</target>  			     
-		   </trans-unit>   
-	 					
+			     <target state="translated">Nein</target>
+		    </trans-unit>	
+
 		</body>
 	</file>
 </xliff>
