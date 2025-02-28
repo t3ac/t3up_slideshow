@@ -1,10 +1,11 @@
 <?php
-defined('TYPO3_MODE') or die();
+
+defined('TYPO3_MODE') || defined('TYPO3') || die('Access denied.');
 
 /***************
  * Assign Icon
  */
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['slideshow'] = 't3up_slideshow';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['slideshow_content'] = 't3upslideshow_content';
 
 
 call_user_func(function () {
@@ -12,11 +13,11 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
         'CType',
-        ['Slideshow', 'slideshow', 't3up_slideshow']
+        ['Slideshow', 't3upslideshow_content', 't3upslideshow_content']
     );
 
     // Define a reduced headers palette
-    $GLOBALS['TCA']['tt_content']['palettes']['headers_slideshow'] = [
+    $GLOBALS['TCA']['tt_content']['palettes']['t3upslideshow_content'] = [
         'label'    => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers',
         'showitem' => 'header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_formlabel,
                         --linebreak--,
@@ -25,7 +26,7 @@ call_user_func(function () {
     ];
 
     // Define what fields to display
-    $GLOBALS['TCA']['tt_content']['types']['slideshow'] = [
+    $GLOBALS['TCA']['tt_content']['types']['t3upslideshow_content'] = [
         'showitem' => '
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general, 
                 --palette--;;general, --palette--;;headers_slideshow,
@@ -58,7 +59,7 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '*',
         'FILE:EXT:t3up_slideshow/Configuration/FlexForms/Slideshow.xml',
-        'slideshow'
+        't3upslideshow_content'
     );
 
 });

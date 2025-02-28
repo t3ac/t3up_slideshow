@@ -39,7 +39,7 @@ class SlideshowPreviewRenderer implements PageLayoutViewDrawItemHookInterface
         &$itemContent,
         array &$row
     ) {
-        if ($row['CType'] === 'slideshow') {
+        if ($row['CType'] === 'slideshow_content') {
             $itemContent .= '<h3>Slideshow</h3>';
             if ($row['image']) {
                 $itemContent .= $parentObject->thumbCode($row, 'tt_content', 'image') . '<br />';

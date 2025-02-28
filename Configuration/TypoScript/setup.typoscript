@@ -5,18 +5,21 @@ lib.contentElement {
 }
 
 tt_content {
-    slideshow < lib.contentElement
-    slideshow {
+    t3upslideshow_content < lib.contentElement
+    t3upslideshow_content {
         templateName = T3upSlideshow
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {
-                references.fieldName = image
+                references.fieldName = assets
                 as = image
             }
-        }
-        dataProcessing {
-            999 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+            20 = T3ac\T3upSlideshow\DataProcessing\FlexFormProcessor
+            20 {
+                if.isTrue.field = pi_flexform
+                fieldName = pi_flexform
+                as = settings
+            }
         }
     }
 }
