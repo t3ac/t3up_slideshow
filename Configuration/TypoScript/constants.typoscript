@@ -1,6 +1,0 @@
-
-# Set override paths for ext:fluid_styled_content
-styles.templates {
-        templateRootPath    = EXT:t3up_slideshow/Resources/Private/Templates/
-        partialRootPath     = EXT:t3up_slideshow/Resources/Private/Partials/
-}
