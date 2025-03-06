@@ -6,13 +6,10 @@
     <sheets>
 		<scontrols>
             <ROOT type="array">
-                <TCEforms>
                     <sheetTitle>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:sheet.controls</sheetTitle>
-                </TCEforms>
                 <type>array</type>
                 <el type="array">                    
                     <animation type="array">
-                        <TCEforms>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.animation</label>
                             <config>
                                 <type>select</type>
@@ -28,7 +25,6 @@
                                     </numIndex>
                                 </items>
                             </config>
-                        </TCEforms>
                     </animation>  
                     
                     <imageformat>
@@ -71,7 +67,6 @@
                     </imageformat>
     	
                     <controlNav type="array">
-                        <TCEforms>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.controlNav</label>
                             <config>
                                 <type>select</type>
@@ -88,11 +83,9 @@
                                 </items>
                                 <default>true</default>
                             </config>
-                        </TCEforms>
                     </controlNav>
                     
                     <directionNav type="array">
-                        <TCEforms>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.directionNav</label>
                             <config>
                                 <type>select</type>
@@ -109,43 +102,36 @@
                                 </items>
                                 <default>true</default>
                             </config>
-                        </TCEforms>
                     </directionNav>
                     
                     <slideshowSpeed type="array">
-                        <TCEforms>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.slideshowSpeed</label>
-							<config>
-					            <type>input</type>
-					            <size>3</size>
-					            <default>4000</default>
-					            <eval>int</eval>
-					            <range>
-					                <lower>500</lower>
-					                <upper>20000</upper>
-					            </range>
-					            <wizards>
-					                <slideshow>
-					                    <type>slider</type>
-					                    <step>100</step>
-					                </slideshow>
-					            </wizards>
-				        	</config>    
-                        </TCEforms>
+				<config>
+			    <type>input</type>
+			    <size>3</size>
+			    <default>4000</default>
+			    <eval>int</eval>
+			    <range>
+				<lower>500</lower>
+				<upper>20000</upper>
+			    </range>
+			    <wizards>
+				<slideshow>
+				    <type>slider</type>
+				    <step>100</step>
+				</slideshow>
+			    </wizards>
+			</config>    
                     </slideshowSpeed>           
-                      
                 </el>
             </ROOT>
         </scontrols>
         <soptions>
             <ROOT type="array">
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:sheet.options</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:sheet.options</sheetTitle>
                 <type>array</type>
                 <el type="array">
                     <captionshow>
-                        <TCEforms>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.captionshow</label>
                             <config>
                                 <type>select</type>
@@ -162,34 +148,28 @@
                                 </items>
                                 <default>false</default>
                             </config>
-                        </TCEforms>
                     </captionshow>          
                 	<captionbackgroundcolor>
-  						<TCEforms>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.captionbg</label>
                              <config>
                                 <type>input</type> 
-								<size>6</size> 
-								<renderType>colorpicker</renderType>
-								<default>#000000</default> 
+					<size>6</size> 
+					<renderType>colorpicker</renderType>
+					<default>#000000</default> 
                             </config>
-                        </TCEforms>
                     </captionbackgroundcolor>    
                 	<captioncolor>
-  						<TCEforms>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.captionColor</label>
                              <config>
                                 <type>input</type> 
-								<size>6</size> 
-								<renderType>colorpicker</renderType>
-								<default>#ffffff</default> 
+					<size>6</size> 
+					<renderType>colorpicker</renderType>
+					<default>#ffffff</default> 
                             </config>
-                        </TCEforms>
                 	</captioncolor> 
                 	<captionopacity>
-  						<TCEforms>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.captionOpacity</label>
-							<config>
+				<config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
                                 <items type="array">
@@ -260,10 +240,8 @@
                                 </items>
                                 <default>b</default>
                             </config> 
-                        </TCEforms>
                 	</captionopacity> 	
                 	<textalign>
-  						<TCEforms>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.textalign</label>
 							<config>
                                 <type>select</type>
@@ -283,10 +261,8 @@
                                     </numIndex>                                            
                                 </items>
                             </config> 
-                        </TCEforms>
                 	</textalign>          	
                 	<slideshowoverlaycolor>
-  						<TCEforms>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.slideshowoverlaycolor</label>
                              <config>
                                 <type>input</type> 
@@ -294,7 +270,6 @@
 								<renderType>colorpicker</renderType>
 								<default></default> 
                             </config>
-                        </TCEforms>
                 	</slideshowoverlaycolor>  	
                 </el>                	
             </ROOT>
