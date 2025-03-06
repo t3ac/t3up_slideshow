@@ -8,7 +8,7 @@
 $EM_CONF[$_EXTKEY] = [
     'title'            => 'T3UP - Slideshow',
     'description'      => 'Bootstrap slideshows for Images',
-    'version'          => '12.0.01',
+    'version'          => '13.0.01',
     'state'            => 'stable',
     'category'         => 'fe',
     'author'           => 'Michael Lang',
@@ -19,8 +19,8 @@ $EM_CONF[$_EXTKEY] = [
     'clearCacheOnLoad' => false,
     'constraints'      => [
         'depends'   => [
-            'typo3' => '12.4',
-            't3up_image' => '12.0',
+            'typo3' => '13.4',
+            't3up_image' => '13',
         ],
         'conflicts' => [],
         'suggests'  => [],
