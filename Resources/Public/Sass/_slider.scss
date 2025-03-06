@@ -1,0 +1,14 @@
+.t3up_slider {
+    
+        &.imageformat1                                      {aspect-ratio: 3 / 1;}
+        &.imageformat2                                      {aspect-ratio: 21 / 9;}
+        &.imageformat3                                      {aspect-ratio: 16 / 9;}
+        &.imageformat4                                      {aspect-ratio: 3 / 2;}
+        &.imageformat5                                      {aspect-ratio: 4 / 3;}
+        &.imageformat6                                      {aspect-ratio: 1 / 1; }
+    
+        img                                                 {width: 100%; height: 100%; object-fit: cover; object-position: center 0;}
+
+    
+    
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2014-09-22T11:44:12Z" product-name="t3up_slideshow">
+		<header/>
+		<body>
+			
+			<trans-unit id="value">
+			     <source>Controls</source>
+			     <target state="translated">Einstellungen</target>
+		    </trans-unit>
+			<trans-unit id="slideshow.title">
+			     <source>Image-Carousel</source>
+			     <target state="translated">Bilder-Carousel</target>
+		    </trans-unit>
+			<trans-unit id="slideshow.description">
+			     <source>Image-Slideshow with Lightboxeffects</source>
+			     <target state="translated">Bilder-Slideshow mit Lightbox</target>
+		    </trans-unit>
+						
+		</body>
+	</file>
+</xliff>
