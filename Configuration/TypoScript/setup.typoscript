@@ -1,0 +1,29 @@
+lib.contentElement {
+    templateRootPaths {
+        122 = EXT:t3up_slideshow/Resources/Private/Templates
+    }
+}
+
+
+page.includeCSS{
+    t3upslider                         = EXT:t3up_slideshow/Resources/Public/Sass/_slider.scss   
+    t3upslider.outputStyle             = compressed    
+}
+
+tt_content {
+    t3upslideshow_content < lib.contentElement
+    t3upslideshow_content {
+        templateName = T3upSlideshow
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = assets
+                as = image
+            }
+        }
+        dataProcessing {
+            999 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+        }        
+        
+    }
+}
