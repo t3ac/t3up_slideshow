@@ -4,7 +4,11 @@
 		<header/>
 		<body>
 			
-			<trans-unit id="value">
+		    <trans-unit id="slideshow.flexvalues">
+			     <source>Controls</source>
+			     <target state="translated">Einstellungen</target>
+		    </trans-unit>
+		   <trans-unit id="value">
 			     <source>Controls</source>
 			     <target state="translated">Einstellungen</target>
 		    </trans-unit>
