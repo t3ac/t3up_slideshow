@@ -14,7 +14,7 @@ call_user_func(function () {
     $frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:';
     
     
-    // Add the CType "headerimage_content"
+    // Add the CType "t3upslideshow_content"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
         'CType',
