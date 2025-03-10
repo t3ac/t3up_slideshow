@@ -8,7 +8,7 @@
 $EM_CONF[$_EXTKEY] = [
     'title'            => 'T3UP - Slideshow',
     'description'      => 'Bootstrap slideshows for Images',
-    'version'          => '13.0.01',
+    'version'          => '13.0.02',
     'state'            => 'stable',
     'category'         => 'fe',
     'author'           => 'Michael Lang',
