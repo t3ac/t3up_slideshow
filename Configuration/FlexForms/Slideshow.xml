@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3DataStructure>
-    <meta>
-        <langDisable>1</langDisable>
-    </meta>
     <sheets>
-		<scontrols>
-            <ROOT type="array">
-                    <sheetTitle>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:sheet.controls</sheetTitle>
+	<scontrols>
+            <ROOT>
+                 <sheetTitle>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:sheet.controls</sheetTitle>
                 <type>array</type>
-                <el type="array">                    
-                    <animation type="array">
+                <el>                    
+                    <animation>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.animation</label>
                             <config>
                                 <type>select</type>
@@ -66,7 +62,7 @@
                         </config>
                     </imageformat>
     	
-                    <controlNav type="array">
+                    <controlNav>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.controlNav</label>
                             <config>
                                 <type>select</type>
@@ -85,7 +81,7 @@
                             </config>
                     </controlNav>
                     
-                    <directionNav type="array">
+                    <directionNav>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.directionNav</label>
                             <config>
                                 <type>select</type>
@@ -104,7 +100,7 @@
                             </config>
                     </directionNav>
                     
-                    <slideshowSpeed type="array">
+                    <slideshowSpeed>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.slideshowSpeed</label>
 				<config>
 			    <type>input</type>
@@ -127,7 +123,7 @@
             </ROOT>
         </scontrols>
         <soptions>
-            <ROOT type="array">
+            <ROOT>
                 <sheetTitle>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:sheet.options</sheetTitle>
                 <type>array</type>
                 <el type="array">
@@ -243,7 +239,7 @@
                 	</captionopacity> 	
                 	<textalign>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.textalign</label>
-							<config>
+				<config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
                                 <items type="array">
@@ -266,9 +262,9 @@
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.slideshowoverlaycolor</label>
                              <config>
                                 <type>input</type> 
-								<size>6</size> 
-								<renderType>colorpicker</renderType>
-								<default></default> 
+					<size>6</size> 
+					<renderType>colorpicker</renderType>
+					<default></default> 
                             </config>
                 	</slideshowoverlaycolor>  	
                 </el>                	
