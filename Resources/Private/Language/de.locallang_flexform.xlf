@@ -46,7 +46,7 @@
 			     <target state="translated">Zeige Kontrollpunkte</target>
 		    </trans-unit>
 			<trans-unit id="slideshow.directionNav">
-			     <source>Create navigation for previous/next navigation</source>
+			     <source>Show navigation for previous/next navigation</source>
 			     <target state="translated">Zeige Richtungspfeile</target>
 		    </trans-unit>
 			<trans-unit id="slideshow.slideshowSpeed">

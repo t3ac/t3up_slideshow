@@ -6,23 +6,23 @@
     {
       "name": "Michael Lang",
       "role": "Developer",
-      "email": "michael.lang@h-da.de"
+      "email": "info@t3ac.de"
     }
   ],
-  "license": ["GPL-2.0-or-later"],
-  "keywords": [
+  "keywords" : [
     "TYPO3",
-    "extension",
-    "t3up"
-  ],
-  "autoload": {
-      "psr-4": {
-          "T3ac\\T3upSlideshow\\": "Classes"
-      }
-  },
-  "require": {
-    "typo3/cms-core": "^13.4"
-  },
+    "extension"
+    ],
+    "type" : "typo3-cms-extension",
+    "license" : "GPL-2.0-or-later",
+    "require" : {
+        "hda/t3up" : "^13"
+    },
+    "autoload": {
+        "psr-4": {
+            "T3ac\\T3upSlideshow\\": "Classes"
+        }
+    },
   "extra": {
     "typo3/cms": {
       "extension-key": "t3up_slideshow"
