@@ -16,7 +16,7 @@
     "type" : "typo3-cms-extension",
     "license" : "GPL-2.0-or-later",
     "require" : {
-        "hda/t3up" : "^13"
+        "T3ac/t3up" : "^13.2"
     },
     "autoload": {
         "psr-4": {
