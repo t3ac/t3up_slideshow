@@ -4,9 +4,30 @@
             <ROOT>
                  <sheetTitle>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:sheet.controls</sheetTitle>
                 <type>array</type>
-                <el>                    
+                <el>        
+                
+                    <animationtype>
+                            <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.type</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.type.1</label>
+                                        <value>carousel</value>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.type.2</label>
+                                        <value>banner</value>
+                                    </numIndex>
+                                </items>
+                                <default>carousel</default>
+                            </config>
+                    </animationtype>  
+                                         
                     <animation>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.animation</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
@@ -23,8 +44,122 @@
                             </config>
                     </animation>  
                     
+                    <inarow>
+                            <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.inarow</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:banner</displayCond>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <label>2</label>
+                                        <value>2</value>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <label>3</label>
+                                        <value>3</value>
+                                    </numIndex>
+                                     <numIndex index="2" type="array">
+                                        <label>4</label>
+                                        <value>4</value>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <label>5</label>
+                                        <value>5</value>
+                                    </numIndex>                                   
+                                    <numIndex index="4" type="array">
+                                        <label>6</label>
+                                        <value>6</value>
+                                    </numIndex>
+                                     <numIndex index="5" type="array">
+                                        <label>7</label>
+                                        <value>7</value>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <label>8</label>
+                                        <value>8</value>
+                                    </numIndex>                                   
+                                   <numIndex index="7" type="array">
+                                        <label>9</label>
+                                        <value>9</value>
+                                    </numIndex>
+                                    <numIndex index="8" type="array">
+                                        <label>10</label>
+                                        <value>10</value>
+                                    </numIndex>                                                                          
+                                   <numIndex index="9" type="array">
+                                        <label>11</label>
+                                        <value>11</value>
+                                    </numIndex>
+                                    <numIndex index="10" type="array">
+                                        <label>12</label>
+                                        <value>12</value>
+                                    </numIndex>                                      
+                                </items>
+                                <default>4</default>
+                            </config>
+                    </inarow>  
+                    
+                    <inarowwidth>
+                            <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.inarowwidth</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:banner</displayCond>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <label>2 Images</label>
+                                        <value>50</value>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <label>3 Images</label>
+                                        <value>33.33</value>
+                                    </numIndex>
+                                     <numIndex index="2" type="array">
+                                        <label>4 Images</label>
+                                        <value>25</value>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <label>5 Images</label>
+                                        <value>20</value>
+                                    </numIndex>                                   
+                                    <numIndex index="4" type="array">
+                                        <label>6 Images</label>
+                                        <value>16.66</value>
+                                    </numIndex>
+                                     <numIndex index="5" type="array">
+                                        <label>7 Images</label>
+                                        <value>14.285</value>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <label>8 Images</label>
+                                        <value>12.5</value>
+                                    </numIndex>                                   
+                                   <numIndex index="7" type="array">
+                                        <label>9 Images</label>
+                                        <value>11.10</value>
+                                    </numIndex>
+                                    <numIndex index="8" type="array">
+                                        <label>10 Images</label>
+                                        <value>10</value>
+                                    </numIndex>                                                                          
+                                   <numIndex index="9" type="array">
+                                        <label>11 Images</label>
+                                        <value>9.09</value>
+                                    </numIndex>
+                                    <numIndex index="10" type="array">
+                                        <label>12 Images</label>
+                                        <value>8.33</value>
+                                    </numIndex>                                      
+                                </items>
+                                <default>25%</default>
+                            </config>
+                    </inarowwidth>  
+                    
+                    
                     <imageformat>
                         <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
+                        <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                         <config>
                             <type>select</type>
                             <renderType>selectSingle</renderType>
@@ -64,6 +199,7 @@
         
                     <controlNav>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.controlNav</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
@@ -83,6 +219,7 @@
                     
                     <directionNav>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.directionNav</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
@@ -102,6 +239,7 @@
                     
                     <slideshowSpeed>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.slideshowSpeed</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                             <config>
                                 <type>input</type>
                                 <size>3</size>
@@ -123,6 +261,7 @@
                 <el type="array">
                     <captionshow>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.captionshow</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
@@ -141,6 +280,7 @@
                     </captionshow>        
 		            <headersize>
 		                <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:carousel.headersize</label>
+		                <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
 		                <config>
 		                    <type>select</type>
 		                    <renderType>selectSingle</renderType>
@@ -171,6 +311,7 @@
 		            </headersize> 
                     <captionbackgroundcolor>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.captionbg</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                              <config>
                                 <type>input</type> 
                                 <size>6</size> 
@@ -180,6 +321,7 @@
                     </captionbackgroundcolor>    
                     <captioncolor>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.captionColor</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                              <config>
                                 <type>input</type> 
                                 <size>6</size> 
@@ -189,6 +331,7 @@
                     </captioncolor> 
                     <captionopacity>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.captionOpacity</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
@@ -263,6 +406,7 @@
                     </captionopacity>     
                     <textalign>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.textalign</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
@@ -285,6 +429,7 @@
                     
                     <slideshowoverlaycolor>
                             <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.slideshowoverlaycolor</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                              <config>
                                 <type>input</type> 
                                 <size>6</size> 
@@ -295,6 +440,7 @@
                     
                     <indicators>
                             <label>LLL:EXT:t3up_container/Resources/Private/Language/locallang_flexform.xlf:indicators</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
