@@ -11,9 +11,28 @@
             <trans-unit id="sheet.controls">
                  <source>Controls</source>
             </trans-unit>    
-
+            
             /* -- Controls --------------------------------- */
             
+            <trans-unit id="slideshow.type">
+                 <source>Type of carousel</source>
+            </trans-unit>   
+                    
+             <trans-unit id="slideshow.type.1">
+                 <source>Carousel</source>
+            </trans-unit>   
+             <trans-unit id="Cslideshow.type.2e">
+                 <source>Banner</source>
+            </trans-unit>   
+            
+            <trans-unit id="slideshow.inarow">
+                 <source>Images in a row</source>
+            </trans-unit>   
+            
+            <trans-unit id="slideshow.inarowwidth">
+                 <source>Width of an image</source>
+            </trans-unit>   
+
             <trans-unit id="slideshow.autostart">
                  <source>Autostart</source>
             </trans-unit>

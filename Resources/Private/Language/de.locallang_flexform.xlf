@@ -16,7 +16,31 @@
 
 
 			/* -- Controls --------------------------------- */
-		    
+
+            <trans-unit id="slideshow.type">
+                 <source>Type of carousel</source>
+                 <target state="translated">Art des Karussells</target>
+            </trans-unit>   
+            	    
+             <trans-unit id="slideshow.type.1">
+                 <source>Carousel</source>
+                 <target state="translated">Karussell</target>
+            </trans-unit>   
+             <trans-unit id="Cslideshow.type.2e">
+                 <source>Banner</source>
+                 <target state="translated">Banner</target>
+            </trans-unit>   
+            	                         	               	    
+            <trans-unit id="slideshow.inarow">
+                 <source>Images in a row</source>
+                 <target state="translated">Sichtbare Bilder in der Reihe</target>
+            </trans-unit>   
+            
+            <trans-unit id="slideshow.inarowwidth">
+                 <source>Width of an image</source>
+                 <target state="translated">Breite des einzelnen Bildes in %</target>
+            </trans-unit>   
+            	    
 			<trans-unit id="slideshow.autostart">
 			     <source>Autostart</source>
 			     <target state="translated">Autostart</target>

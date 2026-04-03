@@ -1,100 +1,124 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-<div id="c{data.uid}" class="t3upSlideshow frame-{data.frame_class} {f:if(condition: data.space_before_class, then: 'frame-space-before-{data.space_before_class}')} {f:if(condition: data.space_after_class, then: 'frame-space-after-{data.space_after_class}')}">
-    <div id="slideshow{data.uid}" class="w-auto t3up_slider carousel slide {flexFormData.animation}" data-ride="carousel" data-bs-ride="carousel" data-interval="{flexFormData.slideshowSpeed}">
+<div id="c{data.uid}" class="t3upSlideshow frame-{data.frame_class} {f:if(condition: data.space_before_class, then: 'mt-{data.space_before_class}')} {f:if(condition: data.space_after_class, then: 'mb-{data.space_after_class}')} ')}">
 
-        <!-- Indicators -->
-         <f:if condition="{flexFormData.controlNav}">
-             <ol class="carousel-indicators {flexFormData.indicators} {f:if(condition: flexFormData.controlNav, then: 'd-none')} ">
-                <f:for each="{image}" as="helper" iteration="iteration">
-                    <li type="button" 
-                    data-target="#slideshow{data.uid}" 
-                    data-bs-target="#slideshow{data.uid}"   
-                    data-slide-to="{iteration.index}"
-                    data-bs-slide-to="{iteration.index}"  
-                    class="{f:if(condition: '{iteration.isFirst}', then: 'active')}"   
-                    data-bs-touch="true">                   
-                    </li>            
-                </f:for>
-            </ol>     
-         </f:if>   
-
-        
-        <div class="carousel-inner">
-            <f:for each="{image}" as="image" iteration="iteration">
-                <div data-bs-interval="{flexFormData.slideshowSpeed}" class="col-4 carousel-item  imageformat{flexFormData.imageformat}  {f:if(condition: '{iteration.isFirst}', then: ' active')}" >
-                    <f:if condition="{image.link}">
-                        <f:then>
-                            <f:link.typolink parameter="{image.link}">
-                                <f:if condition="{flexFormData.slideshowoverlaycolor}">
-                                     <div class="overlayslider position-absolute w-100 h-100 position-absolute z-2" style="background-color: {flexFormData.slideshowoverlaycolor}{flexFormData.captionopacity}{flexFormData.captionopacity};"></div>
-                                </f:if>
-                                <f:render section="picture" arguments="{_all}"/>
-                                <f:if condition="{flexFormData.captionshow}">
-                                    <f:if condition="{image.title}">
-                                        <f:then>
-                                            <div class="carousel-caption p-3 px-lg-0" style="background-color: {flexFormData.captionbackgroundcolor}{flexFormData.captionopacity}{flexFormData.captionopacity};  {flexFormData.captioncolor}; text-align: {flexFormData.textalign}">
-                                                <div class="container">
-                                                    <span class="{flexFormData.headersize} m-0">{image.title}</span> 
-                                                    <f:if condition="{image.description}">
-                                                        <span class="d-none d-md-block mt-3"><f:format.crop maxCharacters="96"  append="&nbsp;�">{image.description}</f:format.crop></span>
-                                                     </f:if>    
-                                                </div>
-                                           </div>
-                                         </f:then>
-                                     </f:if>
-                                 </f:if>
-                            </f:link.typolink> 
-                        </f:then>
-                        <f:else>
-                             <f:if condition="{data.image_zoom}">
-                                 <f:then>
-                                     <span class="{data.lightboxstyle}">
-                                         <a href="{f:uri.image(image: image)}" class="lightbox" data-imagelightbox="{data.lightboxstyle}" rel="lightbox[{data.uid}]">
-                                            <f:render section="picture" arguments="{_all}"/>
-                                        </a>
-                                    </span>    
-                                </f:then>
-                                <f:else>
-                                    <f:if condition="{flexFormData.slideshowoverlaycolor}">
-                                        <div class="overlayslider position-absolute w-100 h-100 position-absolute z-2" style="background-color: {flexFormData.slideshowoverlaycolor}{flexFormData.captionopacity}{flexFormData.captionopacity};"></div>
-                                    </f:if>
-                                    <f:render section="picture" arguments="{_all}"/>                                        
-                                    <f:if condition="{flexFormData.captionshow}">
-                                        <f:if condition="{image.title}">
-                                            <f:then>
-                                                <div class="carousel-caption stil{flexFormData.style}" style="background-color: {flexFormData.captionbackgroundcolor}{flexFormData.captionopacity}{flexFormData.captionopacity};  {flexFormData.captioncolor}; text-align: {flexFormData.textalign}">
-                                                    <div class="container capa">
-                                                        <span class="{flexFormData.headersize} m-0">{image.title}</span> 
-                                                           <f:if condition="{image.description}">
-                                                               <span class="d-none d-md-block mt-3"><f:format.crop maxCharacters="96"  append="&nbsp;…">{image.description}</f:format.crop></span>
-                                                         </f:if>  
-                                                    </div>
-                                                </div>
-                                            </f:then>
-                                        </f:if>
-                                     </f:if>
-                                </f:else>
-                            </f:if>        
-                        </f:else>                                  
-                   </f:if>     
-                  </div>
-            </f:for>
-        </div>
-        
-        <f:if condition="{flexFormData.directionNav}">
-	        <!-- Direction -->
-	        <button class="carousel-control-prev d-flex justify-content-center align-items-center" type="button" data-bs-target="#slideshow{data.uid}" data-bs-slide="prev">
-	           <span class="symbol-outline prev {flexFormData.slidefontsize}" style="background-color:{flexFormData.slideshowoverlaycolor}; color:{flexFormData.slidecolor} !important">&#xe2ea</span>
-	           <span class="visually-hidden">Previous</span>
-	        </button>
-	        <button class="carousel-control-next d-flex justify-content-center align-items-center" type="button" data-bs-target="#slideshow{data.uid}" data-bs-slide="next">
-	          <span class="symbol-outline next {flexFormData.slidefontsize}" style="background-color:{flexFormData.slideshowoverlaycolor}; color:{flexFormData.slidecolor} !important">&#xe5e1</span>
-	          <span class="visually-hidden">Next</span>
-	        </button>
-        </f:if>
-        
-    </div>
+    <f:if condition="{flexFormData.animationtype} == 'carousel'">
+        <f:then>
+		    <div id="slideshow{data.uid}" class="w-auto t3up_slider carousel slide {flexFormData.animation}" data-ride="carousel" data-bs-ride="carousel" data-interval="{flexFormData.slideshowSpeed}">
+		
+		        <!-- Indicators -->
+		         <f:if condition="{flexFormData.controlNav}">
+		             <ol class="carousel-indicators {flexFormData.indicators} {f:if(condition: flexFormData.controlNav, then: 'd-none')} ">
+		                <f:for each="{image}" as="helper" iteration="iteration">
+		                    <li type="button" 
+		                    data-target="#slideshow{data.uid}" 
+		                    data-bs-target="#slideshow{data.uid}"   
+		                    data-slide-to="{iteration.index}"
+		                    data-bs-slide-to="{iteration.index}"  
+		                    class="{f:if(condition: '{iteration.isFirst}', then: 'active')}"   
+		                    data-bs-touch="true">                   
+		                    </li>            
+		                </f:for>
+		            </ol>     
+		         </f:if>   
+		
+		        
+		        <div class="carousel-inner">
+		            <f:for each="{image}" as="image" iteration="iteration">
+		                <div data-bs-interval="{flexFormData.slideshowSpeed}" class="col-4 carousel-item  imageformat{flexFormData.imageformat}  {f:if(condition: '{iteration.isFirst}', then: ' active')}" >
+		                    <f:if condition="{image.link}">
+		                        <f:then>
+		                            <f:link.typolink parameter="{image.link}">
+		                                <f:if condition="{flexFormData.slideshowoverlaycolor}">
+		                                     <div class="overlayslider position-absolute w-100 h-100 position-absolute z-2" style="background-color: {flexFormData.slideshowoverlaycolor}{flexFormData.captionopacity}{flexFormData.captionopacity};"></div>
+		                                </f:if>
+		                                <f:render section="picture" arguments="{_all}"/>
+		                                <f:if condition="{flexFormData.captionshow}">
+		                                    <f:if condition="{image.title}">
+		                                        <f:then>
+		                                            <div class="carousel-caption p-3 px-lg-0" style="background-color: {flexFormData.captionbackgroundcolor}{flexFormData.captionopacity}{flexFormData.captionopacity};  {flexFormData.captioncolor}; text-align: {flexFormData.textalign}">
+		                                                <div class="container">
+		                                                    <span class="{flexFormData.headersize} m-0">{image.title}</span> 
+		                                                    <f:if condition="{image.description}">
+		                                                        <span class="d-none d-md-block mt-3"><f:format.crop maxCharacters="96"  append="&nbsp;�">{image.description}</f:format.crop></span>
+		                                                     </f:if>    
+		                                                </div>
+		                                           </div>
+		                                         </f:then>
+		                                     </f:if>
+		                                 </f:if>
+		                            </f:link.typolink> 
+		                        </f:then>
+		                        <f:else>
+		                             <f:if condition="{data.image_zoom}">
+		                                 <f:then>
+		                                     <span class="{data.lightboxstyle}">
+		                                         <a href="{f:uri.image(image: image)}" class="lightbox" data-imagelightbox="{data.lightboxstyle}" rel="lightbox[{data.uid}]">
+		                                            <f:render section="picture" arguments="{_all}"/>
+		                                        </a>
+		                                    </span>    
+		                                </f:then>
+		                                <f:else>
+		                                    <f:if condition="{flexFormData.slideshowoverlaycolor}">
+		                                        <div class="overlayslider position-absolute w-100 h-100 position-absolute z-2" style="background-color: {flexFormData.slideshowoverlaycolor}{flexFormData.captionopacity}{flexFormData.captionopacity};"></div>
+		                                    </f:if>
+		                                    <f:render section="picture" arguments="{_all}"/>                                        
+		                                    <f:if condition="{flexFormData.captionshow}">
+		                                        <f:if condition="{image.title}">
+		                                            <f:then>
+		                                                <div class="carousel-caption stil{flexFormData.style}" style="background-color: {flexFormData.captionbackgroundcolor}{flexFormData.captionopacity}{flexFormData.captionopacity};  {flexFormData.captioncolor}; text-align: {flexFormData.textalign}">
+		                                                    <div class="container capa">
+		                                                        <span class="{flexFormData.headersize} m-0">{image.title}</span> 
+		                                                           <f:if condition="{image.description}">
+		                                                               <span class="d-none d-md-block mt-3"><f:format.crop maxCharacters="96"  append="&nbsp;…">{image.description}</f:format.crop></span>
+		                                                         </f:if>  
+		                                                    </div>
+		                                                </div>
+		                                            </f:then>
+		                                        </f:if>
+		                                     </f:if>
+		                                </f:else>
+		                            </f:if>        
+		                        </f:else>                                  
+		                   </f:if>     
+		                  </div>
+		            </f:for>
+		        </div>
+		        
+		        <f:if condition="{flexFormData.directionNav}">
+			        <!-- Direction -->
+			        <button class="carousel-control-prev d-flex justify-content-center align-items-center" type="button" data-bs-target="#slideshow{data.uid}" data-bs-slide="prev">
+			           <span class="symbol-outline prev {flexFormData.slidefontsize}" style="background-color:{flexFormData.slideshowoverlaycolor}; color:{flexFormData.slidecolor} !important">&#xe2ea</span>
+			           <span class="visually-hidden">Previous</span>
+			        </button>
+			        <button class="carousel-control-next d-flex justify-content-center align-items-center" type="button" data-bs-target="#slideshow{data.uid}" data-bs-slide="next">
+			          <span class="symbol-outline next {flexFormData.slidefontsize}" style="background-color:{flexFormData.slideshowoverlaycolor}; color:{flexFormData.slidecolor} !important">&#xe5e1</span>
+			          <span class="visually-hidden">Next</span>
+			        </button>
+		        </f:if>
+		    </div>
+		 </f:then>  
+ 
+		<f:else>	
+	        <div class="container inarow d-flex align-items-stretch" style="--n: {flexFormData.inarow}; --s: {flexFormData.inarowwidth}%">
+	              <f:for each="{image}" as="image" iteration="iteration">
+	                  <div class="bannerelement d-flex align-items-center""> 
+		                  <f:if condition="{image.link}">
+		                      <f:then>
+		                          <f:link.typolink parameter="{image.link}">
+		                               <f:render section="picture" arguments="{_all}"/>
+		                          </f:link.typolink>
+		                      </f:then>
+		                      <f:else>
+		                         <f:render section="picture" arguments="{_all}"/>
+		                      </f:else>
+		                   </f:if>
+		              </div>     
+	             </f:for>
+	         </div>             
+		</f:else>
+	</f:if>		
+	
 </div>
 
 <f:section name="picture">
