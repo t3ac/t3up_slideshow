@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-<div id="c{data.uid}" class="t3upSlideshow frame-{data.frame_class} {f:if(condition: data.space_before_class, then: 'mt-{data.space_before_class}')} {f:if(condition: data.space_after_class, then: 'mb-{data.space_after_class}')} ')}">
+<div id="c{data.uid}" class="t3upSlideshow frame-{data.frame_class} {f:if(condition: data.space_before_class, then: 'mt-{data.space_before_class}')} {f:if(condition: data.space_after_class, then: 'mb-{data.space_after_class}')}">
 
     <f:if condition="{flexFormData.animationtype} == 'carousel'">
         <f:then>
@@ -100,7 +100,7 @@
 		 </f:then>  
  
 		<f:else>	
-	        <div class="container inarow d-flex align-items-stretch" style="--n: {flexFormData.inarow}; --s: {flexFormData.inarowwidth}%">
+	        <div class="container inarow d-flex align-items-stretch" style="--n: {flexFormData.inarow}; --s: {flexFormData.inarowwidth}% ;  --d: {flexFormData.duration}s ">
 	              <f:for each="{image}" as="image" iteration="iteration">
 	                  <div class="bannerelement d-flex align-items-center""> 
 		                  <f:if condition="{image.link}">
