@@ -157,6 +157,99 @@
                     </inarowwidth>  
                     
                     
+                    <duration>
+                            <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:slideshow.duration</label>
+                            <displayCond>FIELD:scontrols.animationtype:=:banner</displayCond>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <label>1</label>
+                                        <value>1</value>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <label>2</label>
+                                        <value>2</value>
+                                    </numIndex>
+                                     <numIndex index="2" type="array">
+                                        <label>3</label>
+                                        <value>3</value>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <label>4</label>
+                                        <value>4</value>
+                                    </numIndex>                                   
+                                    <numIndex index="4" type="array">
+                                        <label>5</label>
+                                        <value>5</value>
+                                    </numIndex>
+                                     <numIndex index="5" type="array">
+                                        <label>6</label>
+                                        <value>6</value>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <label>7</label>
+                                        <value>7</value>
+                                    </numIndex>                                   
+                                   <numIndex index="7" type="array">
+                                        <label>8</label>
+                                        <value>8</value>
+                                    </numIndex>
+                                    <numIndex index="8" type="array">
+                                        <label>9</label>
+                                        <value>9</value>
+                                    </numIndex>                                                                          
+                                   <numIndex index="9" type="array">
+                                        <label>10</label>
+                                        <value>10</value>
+                                    </numIndex>
+                                    <numIndex index="10" type="array">
+                                        <label>11</label>
+                                        <value>11</value>
+                                    </numIndex> 
+                                    <numIndex index="11" type="array">
+                                        <label>12</label>
+                                        <value>12</value>
+                                    </numIndex>
+                                     <numIndex index="12" type="array">
+                                        <label>13</label>
+                                        <value>13</value>
+                                    </numIndex>
+                                    <numIndex index="13" type="array">
+                                        <label>14</label>
+                                        <value>14</value>
+                                    </numIndex>                                   
+                                    <numIndex index="14" type="array">
+                                        <label>15</label>
+                                        <value>15</value>
+                                    </numIndex>
+                                     <numIndex index="15" type="array">
+                                        <label>16</label>
+                                        <value>16</value>
+                                    </numIndex>
+                                    <numIndex index="16" type="array">
+                                        <label>17</label>
+                                        <value>17</value>
+                                    </numIndex>                                   
+                                   <numIndex index="17" type="array">
+                                        <label>18</label>
+                                        <value>18</value>
+                                    </numIndex>
+                                    <numIndex index="18" type="array">
+                                        <label>19</label>
+                                        <value>19</value>
+                                    </numIndex>                                                                          
+                                   <numIndex index="19" type="array">
+                                        <label>20</label>
+                                        <value>20</value>
+                                    </numIndex>                                 
+                                </items>
+                                <default>8</default>
+                            </config>
+                    </duration>  
+                    
+                    
                     <imageformat>
                         <label>LLL:EXT:t3up_slideshow/Resources/Private/Language/locallang_flexform.xlf:label.format</label>
                         <displayCond>FIELD:scontrols.animationtype:=:carousel</displayCond>
