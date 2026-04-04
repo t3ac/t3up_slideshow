@@ -21,7 +21,7 @@
              <trans-unit id="slideshow.type.1">
                  <source>Carousel</source>
             </trans-unit>   
-             <trans-unit id="Cslideshow.type.2e">
+             <trans-unit id="slideshow.type.2">
                  <source>Banner</source>
             </trans-unit>   
             
@@ -31,8 +31,12 @@
             
             <trans-unit id="slideshow.inarowwidth">
                  <source>Width of an image</source>
-            </trans-unit>   
-
+            </trans-unit>  
+            
+            <trans-unit id="slideshow.duration">
+                 <source>Duration in sec</source>
+            </trans-unit>  
+            
             <trans-unit id="slideshow.autostart">
                  <source>Autostart</source>
             </trans-unit>
