@@ -15,8 +15,10 @@
     ],
     "type" : "typo3-cms-extension",
     "license" : "GPL-2.0-or-later",
-    "require" : {
-    },
+	  "require" : {
+	 	  "php": ">= 8.3 < 8.6",
+		  "t3ac/t3up" : "^14"
+	  },
     "autoload": {
         "psr-4": {
             "T3ac\\T3upSlideshow\\": "Classes"
