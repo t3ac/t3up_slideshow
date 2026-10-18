@@ -1,1 +1,1 @@
-28.02.2025 - TYPO3 Version 13
+18.10.2026 - TYPO3 Version 14
