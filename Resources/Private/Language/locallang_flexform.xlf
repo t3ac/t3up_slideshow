@@ -88,7 +88,14 @@
              </trans-unit>                       
              <trans-unit id="slider.indicators.4" xml:space="preserve">           
                  <source>Square bottom outline</source>           
+             </trans-unit>                  
+             <trans-unit id="slider.indicators.5" xml:space="preserve">           
+                 <source>Square top</source>           
              </trans-unit>                       
+             <trans-unit id="slider.indicators.6" xml:space="preserve">           
+                 <source>Square top outline</source>           
+             </trans-unit>                             
+                  
              <trans-unit id="slider.slideshowoverlaycolor" xml:space="preserve">
                  <source>Backgroundcolor for the stripes</source>
             </trans-unit>            
@@ -107,32 +114,13 @@
             </trans-unit>  
                       
             /* -- Optionen --------------------------------- */
-            <trans-unit id="carousel.style">
-                 <source>Stil</source>
-            </trans-unit>
-            <trans-unit id="slideshow.captionshow">
-                 <source>Schow/hide the imagecaption and -description</source>
-            </trans-unit>
-            <trans-unit id="slideshow.captionbg">
+
+
+            <trans-unit id="slideshow.arbg">
                  <source>Background-color</source>
             </trans-unit>        
-            <trans-unit id="slideshow.captionColor">
+            <trans-unit id="slideshow.arColor">
                  <source>Text-color</source>
-            </trans-unit>    
-            <trans-unit id="slideshow.captionOpacity">
-                 <source>Background-opacity</source>
-           </trans-unit>
-            <trans-unit id="slideshow.textalign">
-                 <source>textalign</source>
-            </trans-unit>    
-            <trans-unit id="slideshow.imageslideshowbg">
-                 <source>Background-color</source>
-            </trans-unit>    
-            <trans-unit id="slideshow.slideshowbg">
-                 <source>Background-color</source>
-            </trans-unit>    
-            <trans-unit id="slideshow.slideshowoverlaycolor">
-                 <source>Overlay-color</source>
             </trans-unit>    
             <trans-unit id="label.yes">
                  <source>yes</source>
@@ -184,8 +172,14 @@
                 <source>3 / 1</source>
             </trans-unit>   
             <trans-unit id="label.format6">
+                <source>10 / 3</source>
+            </trans-unit>               
+            <trans-unit id="label.format7">
                 <source>4 / 5</source>
-            </trans-unit>   
+            </trans-unit> 
+            <trans-unit id="label.format8">
+                <source>4 / 3</source>
+            </trans-unit>               
         </body>
     </file>
 </xliff>

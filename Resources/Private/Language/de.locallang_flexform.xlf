@@ -6,134 +6,105 @@
 			
 			
 			<trans-unit id="sheet.options">
-			     <source>Options</source>
-			     <target state="translated">Optionen</target>
+			     <source>Optionen</source>
 		    </trans-unit>
 			<trans-unit id="sheet.controls">
-			     <source>Controls</source>
-			     <target state="translated">Einstellungen</target>
+			     <source>Einstellungen</source>
 		    </trans-unit>	
-
 
 			/* -- Controls --------------------------------- */
 
             <trans-unit id="slideshow.type">
-                 <source>Type of carousel</source>
-                 <target state="translated">Art des Karussells</target>
+                 <source>Art des Karussells</source>
             </trans-unit>   
             	    
              <trans-unit id="slideshow.type.1">
-                 <source>Carousel</source>
-                 <target state="translated">Karussell</target>
+                 <source>Karussell</source>
             </trans-unit>   
              <trans-unit id="Cslideshow.type.2e">
                  <source>Banner</source>
-                 <target state="translated">Banner</target>
             </trans-unit>   
             	                         	               	    
             <trans-unit id="slideshow.inarow">
-                 <source>Images in a row</source>
-                 <target state="translated">Sichtbare Bilder in der Reihe</target>
+                 <source>Sichtbare Bilder in der Reihe</source>
             </trans-unit>   
             
             <trans-unit id="slideshow.inarowwidth">
-                 <source>Width of an image</source>
-                 <target state="translated">Breite des einzelnen Bildes in %</target>
+                 <source>Breite des einzelnen Bildes in %</source>
             </trans-unit>   
             	    
 			<trans-unit id="slideshow.autostart">
 			     <source>Autostart</source>
-			     <target state="translated">Autostart</target>
 		    </trans-unit>
 			<trans-unit id="slideshow.animation">
-			     <source>Type of presentation</source>
-			     <target state="translated">Art der Präsentation</target>
+			     <source>Art der Präsentation</source>
 		    </trans-unit>
 			<trans-unit id="slideshow.animation.1">
-			     <source>slide</source>
-			     <target state="translated">Verschiebe</target>
+			     <source>Verschiebe</source>
 		    </trans-unit>
 			<trans-unit id="slideshow.animation.2">
-			     <source>fade</source>
-			     <target state="translated">Einblenden</target>
+			     <source>Einblenden</source>
 		    </trans-unit>
 			<trans-unit id="slideshow.slideshowwidth">
-			     <source>Width of the slideshow</source>
-			     <target state="translated">Breite des Carousels in Pixel, aber 0 = 100%</target>
+			     <source>Breite des Carousels in Pixel, aber 0 = 100%</source>
 		    </trans-unit>	
 			<trans-unit id="slideshow.slideshowheight">
-			     <source>Height of the slideshow</source>
-			     <target state="translated">Höhe des Carousels (1-100vH) Vordefiniert: 60vH, Mindestwert 200px;</target>	
+			     <source>Höhe des Carousels (1-100vH) Vordefiniert: 60vH, Mindestwert 200px;</source>	
 		    </trans-unit>
 			<trans-unit id="slideshow.controlNav">
-			     <source>Show controls</source>
-			     <target state="translated">Zeige Kontrollpunkte</target>
+			     <source>Zeige Kontrollpunkte</source>
 		    </trans-unit>
 			<trans-unit id="slideshow.directionNav">
-			     <source>Show navigation for previous/next navigation</source>
-			     <target state="translated">Zeige Richtungspfeile</target>
+			     <source>Zeige Richtungspfeile</source>
 		    </trans-unit>
 			<trans-unit id="slideshow.slideshowSpeed">
-			     <source>Speed in mil. Sec.</source>
-			     <target state="translated">Geschwindigkeit in Millisekunden (Vorgabe 4 Sekunden)</target>
+			     <source>Geschwindigkeit in Millisekunden (Vorgabe 4 Sekunden)</source>
 		    </trans-unit>
 			<trans-unit id="slideshow.animationLoop">
-			     <source>Animation Loop</source>
-			     <target state="translated">Animation wiederholen</target>
+			     <source>Animation wiederholen</source>
 		    </trans-unit>	 
 			<trans-unit id="slideshow.maxheight">
-			     <source>Max. height of the slider</source>
-			     <target state="translated">Maximale Höhe des Sliders (px)</target>
+			     <source>Maximale Höhe des Sliders (px)</source>
 		    </trans-unit>	 
 		    
 		    
 			/* -- Optionen --------------------------------- */
 			
             <trans-unit id="slideshow.captionshow">
-                 <source>Schow/hide the imagecaption and -description</source>
-                 <target state="translated">Zeige Bildtitel und -beschreibung</target>  
+                 <source>Zeige Bildtitel und -beschreibung</source>  
             </trans-unit>
 		    	
 			<trans-unit id="slideshow.captionbg">
-			     <source>Background-color</source>
-			     <target state="translated">Hintergrundfarbe des Textbereichs</target>	
+			     <source>Hintergrundfarbe des Textbereichs</source>	
 		    </trans-unit>		
 		    
 			<trans-unit id="slideshow.captionColor">
-			     <source>Text-color</source>
-			     <target state="translated">Textfarbe</target>	
+			     <source>Textfarbe</source>	
 		    </trans-unit>	
 		    
 			<trans-unit id="slideshow.captionOpacity">
-			     <source>Background-opacity</source>
-			     <target state="translated">Hintergrund Durchsichtigkeit</target>	
+			     <source>Hintergrund Durchsichtigkeit</source>	
 		   </trans-unit>
 		    
 			<trans-unit id="slideshow.textalign">
-			     <source>textalign</source>
-			     <target state="translated">Textausrichtigung</target>	
+			     <source>Textausrichtigung</source>	
 		    </trans-unit>	
 			
 			<trans-unit id="slideshow.imageslideshowbg">
-			     <source>Background-color</source>
-			     <target state="translated">Hintergrundfarbe</target>	
+			     <source>Hintergrundfarbe</source>	
 		    </trans-unit>	
 			<trans-unit id="slideshow.slideshowbg">
-			     <source>Background-color</source>
-			     <target state="translated">Hintergrundfarbe des kompletten Carousels</target>
+			     <source>Hintergrundfarbe des kompletten Carousels</source>
 		    </trans-unit>	
 		    
 			<trans-unit id="slideshow.slideshowoverlaycolor">
-			     <source>Overlay-color</source>
-			     <target state="translated">Transparenzfarbe für die Bilder</target>
+			     <source>Transparenzfarbe für die Bilder</source>
 		    </trans-unit>	
 			<trans-unit id="label.yes">
-			     <source>yes</source>
-			     <target state="translated">Ja</target>
+			     <source>Ja</source>
 		    </trans-unit>	
 			<trans-unit id="label.no">
-			     <source>no</source>
-			     <target state="translated">Nein</target>
+			     <source>Nein</source>
 		    </trans-unit>	
 
 		</body>

@@ -1,23 +1,28 @@
-lib.contentElement {
-    templateRootPaths {
-        112 = EXT:t3up_slideshow/Resources/Private/Templates
-    }
-}
-
 tt_content {
-    t3upslideshow_content < lib.contentElement
+    t3upslideshow_content = FLUIDTEMPLATE
+
     t3upslideshow_content {
         templateName = Slideshow
+
+        templateRootPaths {
+            40 = EXT:t3up_slideshow/Resources/Private/Templates
+        }
+        partialRootPaths {
+            40 = EXT:t3up_slideshow/Resources/Private/Partials
+        }
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {
                 references.fieldName = assets
                 as = image
             }
+
+            20 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+            20 {
+                as = site
+            }
+
+            30 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
         }
-        dataProcessing {
-            999 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
-        }        
     }
 }
-
